@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xslt"?>
+
+<!--
+  Sample XML file for VS Code theme preview.
+  Demonstrates various XML syntax elements including
+  namespaces, CDATA, DTD references, and complex structures.
+-->
+
+<!DOCTYPE catalog SYSTEM "catalog.dtd">
+
+<catalog
+  xmlns="http://example.com/catalog"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://example.com/catalog catalog.xsd"
+  version="2.0"
+  lastUpdated="2025-01-15T10:30:00Z"
+>
+
+  <!-- ═══ Metadata Section ═══════════════════════════════════ -->
+  <metadata>
+    <dc:title>Theme Preview Catalog</dc:title>
+    <dc:creator>Claude Theme Demo</dc:creator>
+    <dc:description>
+      A comprehensive XML sample file designed for testing
+      and previewing VS Code color themes.
+    </dc:description>
+    <dc:date>2025-01-15</dc:date>
+    <dc:language>en</dc:language>
+    <dc:rights>MIT License</dc:rights>
+    <tags>
+      <tag priority="high">theme</tag>
+      <tag priority="medium">preview</tag>
+      <tag priority="low">sample</tag>
+    </tags>
+  </metadata>
+
+  <!-- ═══ Configuration Section ══════════════════════════════ -->
+  <configuration>
+    <database>
+      <connection
+        host="localhost"
+        port="5432"
+        name="catalog_db"
+        ssl="true"
+      />
+      <credentials>
+        <username>admin</username>
+        <password encrypted="true">
+          <![CDATA[U2FsdGVkX1+abc123/encrypted==]]>
+        </password>
+      </credentials>
+      <pool minSize="5" maxSize="20" timeout="30000" />
+    </database>
+
+    <cache enabled="true">
+      <strategy>LRU</strategy>
+      <maxEntries>10000</maxEntries>
+      <ttl unit="seconds">3600</ttl>
+      <evictionPolicy>time-based</evictionPolicy>
+    </cache>
+
+    <logging level="INFO">
+      <appender type="file" path="/var/log/catalog.log" />
+      <appender type="console" format="[%date] [%level] %message" />
+      <filters>
+        <filter package="com.example.catalog" level="DEBUG" />
+        <filter package="org.hibernate" level="WARN" />
+      </filters>
+    </logging>
+  </configuration>
+
+  <!-- ═══ Products Section ═══════════════════════════════════ -->
+  <products>
+    <product id="PROD-001" status="active" featured="true">
+      <name>Wireless Bluetooth Headphones</name>
+      <sku>WBH-PRO-2025</sku>
+      <description>
+        <![CDATA[
+          Premium <b>wireless headphones</b> with active noise cancellation,
+          40-hour battery life & high-fidelity audio. Supports LDAC & aptX HD.
+
+          Features:
+          • Active Noise Cancellation (ANC)
+          • Transparency mode
+          • Multi-point connection
+          • USB-C fast charging
+        ]]>
+      </description>
+      <pricing currency="USD">
+        <listPrice>299.99</listPrice>
+        <salePrice>249.99</salePrice>
+        <discount percentage="16.67" validUntil="2025-03-31" />
+      </pricing>
+      <inventory>
+        <warehouse location="US-EAST" quantity="1500" />
+        <warehouse location="US-WEST" quantity="820" />
+        <warehouse location="EU-CENTRAL" quantity="650" />
+      </inventory>
+      <categories>
+        <category path="/electronics/audio/headphones" primary="true" />
+        <category path="/deals/featured" />
+      </categories>
+      <attributes>
+        <attribute name="color" type="enum">
+          <value>Midnight Black</value>
+          <value>Silver Gray</value>
+          <value>Navy Blue</value>
+        </attribute>
+        <attribute name="weight" type="measurement" unit="grams">250</attribute>
+        <attribute name="bluetooth" type="string">5.3</attribute>
+        <attribute name="batteryLife" type="measurement" unit="hours">40</attribute>
+        <attribute name="noiseCancellation" type="boolean">true</attribute>
+      </attributes>
+      <reviews averageRating="4.7" totalReviews="2847">
+        <review id="REV-10234" rating="5" verified="true" date="2025-01-10">
+          <author>TechEnthusiast42</author>
+          <title>Best headphones I've ever owned!</title>
+          <body>
+            <![CDATA[
+              The sound quality is exceptional. ANC works perfectly
+              in noisy environments. Battery easily lasts 2+ days
+              with moderate use. Highly recommended!
+            ]]>
+          </body>
+          <helpful upvotes="156" downvotes="3" />
+        </review>
+        <review id="REV-10567" rating="4" verified="true" date="2025-01-08">
+          <author>AudioPhile99</author>
+          <title>Great sound, minor comfort issue</title>
+          <body>Sound quality is top-notch, but ear pads could be softer for extended use.</body>
+          <helpful upvotes="42" downvotes="7" />
+        </review>
+      </reviews>
+    </product>
+
+    <product id="PROD-002" status="active" featured="false">
+      <name>Mechanical Keyboard — Cherry MX Brown</name>
+      <sku>MKB-CMB-2025</sku>
+      <description>Compact 75% mechanical keyboard with hot-swappable switches and RGB backlighting.</description>
+      <pricing currency="USD">
+        <listPrice>159.99</listPrice>
+        <salePrice>159.99</salePrice>
+      </pricing>
+      <inventory>
+        <warehouse location="US-EAST" quantity="3200" />
+        <warehouse location="EU-CENTRAL" quantity="1100" />
+      </inventory>
+      <categories>
+        <category path="/electronics/peripherals/keyboards" primary="true" />
+      </categories>
+      <attributes>
+        <attribute name="layout" type="string">75%</attribute>
+        <attribute name="switches" type="string">Cherry MX Brown</attribute>
+        <attribute name="hotSwappable" type="boolean">true</attribute>
+        <attribute name="rgb" type="boolean">true</attribute>
+        <attribute name="connectivity" type="enum">
+          <value>USB-C</value>
+          <value>Bluetooth 5.0</value>
+          <value>2.4GHz Wireless</value>
+        </attribute>
+      </attributes>
+      <reviews averageRating="4.5" totalReviews="1203" />
+    </product>
+
+    <product id="PROD-003" status="discontinued">
+      <name>USB-C Hub — 7-in-1</name>
+      <sku>UCH-7IN1-2024</sku>
+      <description>Multi-port USB-C hub with HDMI 4K@60Hz, ethernet, and SD card reader.</description>
+      <pricing currency="USD">
+        <listPrice>79.99</listPrice>
+        <salePrice>59.99</salePrice>
+        <discount percentage="25" reason="clearance" />
+      </pricing>
+      <inventory>
+        <warehouse location="US-EAST" quantity="150" />
+      </inventory>
+      <categories>
+        <category path="/electronics/accessories/hubs" primary="true" />
+        <category path="/deals/clearance" />
+      </categories>
+    </product>
+  </products>
+
+  <!-- ═══ Users Section ══════════════════════════════════════ -->
+  <users>
+    <user id="USR-001" role="admin" active="true">
+      <profile>
+        <firstName>Alice</firstName>
+        <lastName>Johnson</lastName>
+        <email>alice@example.com</email>
+        <avatar url="https://example.com/avatars/alice.jpg" />
+      </profile>
+      <preferences>
+        <theme>dark</theme>
+        <language>en-US</language>
+        <notifications email="true" push="true" sms="false" />
+        <timezone>America/New_York</timezone>
+      </preferences>
+      <permissions>
+        <permission resource="products" actions="create,read,update,delete" />
+        <permission resource="users" actions="create,read,update,delete" />
+        <permission resource="orders" actions="read,update" />
+        <permission resource="analytics" actions="read" />
+      </permissions>
+    </user>
+
+    <user id="USR-002" role="editor" active="true">
+      <profile>
+        <firstName>Bob</firstName>
+        <lastName>Smith</lastName>
+        <email>bob@example.com</email>
+      </profile>
+      <permissions>
+        <permission resource="products" actions="create,read,update" />
+        <permission resource="orders" actions="read" />
+      </permissions>
+    </user>
+  </users>
+
+  <!-- ═══ API Endpoints ══════════════════════════════════════ -->
+  <api version="2.0" basePath="/api/v2">
+    <endpoint method="GET" path="/products" auth="optional">
+      <description>List all products with pagination and filtering</description>
+      <parameters>
+        <parameter name="page" type="integer" required="false" default="1" />
+        <parameter name="limit" type="integer" required="false" default="20" min="1" max="100" />
+        <parameter name="status" type="string" required="false" enum="active,discontinued,draft" />
+        <parameter name="sort" type="string" required="false" default="name:asc" />
+      </parameters>
+      <responses>
+        <response code="200" description="Successful response" />
+        <response code="400" description="Invalid parameters" />
+        <response code="429" description="Rate limit exceeded" />
+      </responses>
+    </endpoint>
+
+    <endpoint method="POST" path="/products" auth="required" roles="admin,editor">
+      <description>Create a new product</description>
+      <parameters>
+        <parameter name="name" type="string" required="true" minLength="3" maxLength="200" />
+        <parameter name="sku" type="string" required="true" pattern="[A-Z]{3}-[A-Z0-9]+-\d{4}" />
+        <parameter name="price" type="decimal" required="true" min="0.01" />
+      </parameters>
+      <responses>
+        <response code="201" description="Product created successfully" />
+        <response code="400" description="Validation error" />
+        <response code="401" description="Authentication required" />
+        <response code="403" description="Insufficient permissions" />
+        <response code="409" description="SKU already exists" />
+      </responses>
+    </endpoint>
+  </api>
+
+</catalog>
