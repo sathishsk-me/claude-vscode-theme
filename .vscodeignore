@@ -1,0 +1,36 @@
+# ─── Version Control ──────────────────────────────────────────────
+.git
+.gitignore
+.gitattributes
+
+# ─── Sample Files (not needed in extension) ──────────────────────
+samples/
+
+# ─── Development Files ───────────────────────────────────────────
+.vscode/
+.claude/
+.github/
+*.vsix
+
+# ─── Documentation (README is included by default) ───────────────
+CHANGELOG.md
+
+# ─── Config & Meta ───────────────────────────────────────────────
+.editorconfig
+.prettierrc
+.eslintrc*
+tsconfig.json
+jsconfig.json
+*.log
+*.tmp
+
+# ─── OS Files ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Node (if any) ───────────────────────────────────────────────
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

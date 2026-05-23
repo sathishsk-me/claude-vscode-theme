@@ -1,0 +1,56 @@
+{
+  "name": "claude-theme-for-vscode",
+  "displayName": "Claude Theme for VS Code by SK",
+  "description": "Dark theme inspired by the Claude Code terminal interface — warm oranges, deep darks, and cream accents. Includes two variants: Claude Code and Claude Code Warm.",
+  "version": "0.1.0",
+  "publisher": "sathishsk-me",
+  "author": {
+    "name": "Sathish SK"
+  },
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "claude",
+    "anthropic",
+    "dark",
+    "dark theme",
+    "warm",
+    "terminal",
+    "color theme",
+    "orange",
+    "cream",
+    "claude code"
+  ],
+  "galleryBanner": {
+    "color": "#1a1a2e",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Claude Code",
+        "uiTheme": "vs-dark",
+        "path": "./themes/claude-code-color-theme.json"
+      },
+      {
+        "label": "Claude Code Warm",
+        "uiTheme": "vs-dark",
+        "path": "./themes/claude-code-warm-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sathishsk-me/claude_vscode_theme.git"
+  },
+  "homepage": "https://github.com/sathishsk-me/claude_vscode_theme#readme",
+  "bugs": {
+    "url": "https://github.com/sathishsk-me/claude_vscode_theme/issues"
+  },
+  "license": "MIT"
+}

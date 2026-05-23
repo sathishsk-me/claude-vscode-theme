@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sample HTML file for VS Code theme preview" />
+  <meta name="author" content="Claude Theme Demo" />
+
+  <title>Theme Preview &mdash; Sample Page</title>
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preload" href="sample.css" as="style" />
+  <link rel="stylesheet" href="sample.css" />
+
+  <!-- Inline critical styles -->
+  <style>
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: inherit;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Theme Preview Sample",
+    "description": "A sample HTML page for previewing VS Code themes"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ═══ Navigation ═══════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav__logo">🎨 ThemePreview</a>
+    <ul class="nav__links">
+      <li><a href="#features" class="nav__link active">Features</a></li>
+      <li><a href="#components" class="nav__link">Components</a></li>
+      <li><a href="#code" class="nav__link">Code</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+    <button class="btn btn--outline" id="theme-toggle" aria-label="Toggle dark mode">
+      🌙 Dark Mode
+    </button>
+  </nav>
+
+  <!-- ═══ Hero Section ═════════════════════════════════════════ -->
+  <header class="hero" id="top">
+    <h1>VS Code Theme Preview</h1>
+    <p>A comprehensive HTML sample showcasing various elements &amp; patterns.</p>
+    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+      <a href="#features" class="btn btn--primary">Explore Features</a>
+      <a href="#code" class="btn btn--outline" style="color: white; border-color: white;">
+        View Code
+      </a>
+    </div>
+  </header>
+
+  <main class="container" id="main-content">
+
+    <!-- ═══ Features Section ═════════════════════════════════── -->
+    <section id="features" class="mt-lg mb-lg" aria-labelledby="features-heading">
+      <h2 id="features-heading" class="text-center mb-lg">Features</h2>
+      <div class="grid">
+        <article class="card animate-fade-in">
+          <h3 class="card__title">🚀 Performance</h3>
+          <p class="card__description">
+            Optimized for speed with lazy loading, code splitting, and
+            efficient resource management.
+          </p>
+          <div class="card__tags">
+            <span class="badge">Fast</span>
+            <span class="badge badge--success">Optimized</span>
+          </div>
+        </article>
+
+        <article class="card animate-fade-in">
+          <h3 class="card__title">🔒 Security</h3>
+          <p class="card__description">
+            Built with security best practices including CSP headers,
+            input sanitization, and HTTPS enforcement.
+          </p>
+          <div class="card__tags">
+            <span class="badge badge--warning">Important</span>
+            <span class="badge">Secure</span>
+          </div>
+        </article>
+
+        <article class="card animate-fade-in">
+          <h3 class="card__title">♿ Accessibility</h3>
+          <p class="card__description">
+            WCAG 2.1 AA compliant with proper ARIA labels, keyboard
+            navigation, and screen reader support.
+          </p>
+          <div class="card__tags">
+            <span class="badge badge--success">A11y</span>
+            <span class="badge">Inclusive</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══ Components Section ═══════════════════════════════── -->
+    <section id="components" class="mb-lg" aria-labelledby="components-heading">
+      <h2 id="components-heading" class="mb-lg">UI Components</h2>
+
+      <!-- Table -->
+      <h3>Data Table</h3>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+          <caption class="sr-only">Sample user data</caption>
+          <thead>
+            <tr style="border-bottom: 2px solid var(--color-border);">
+              <th style="text-align: left; padding: 0.75rem;">Name</th>
+              <th style="text-align: left; padding: 0.75rem;">Role</th>
+              <th style="text-align: left; padding: 0.75rem;">Status</th>
+              <th style="text-align: right; padding: 0.75rem;">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--color-border);">
+              <td style="padding: 0.75rem;">Alice Johnson</td>
+              <td style="padding: 0.75rem;">Administrator</td>
+              <td style="padding: 0.75rem;"><span class="badge badge--success">Active</span></td>
+              <td style="padding: 0.75rem; text-align: right;">98.5</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-border);">
+              <td style="padding: 0.75rem;">Bob Smith</td>
+              <td style="padding: 0.75rem;">Developer</td>
+              <td style="padding: 0.75rem;"><span class="badge badge--success">Active</span></td>
+              <td style="padding: 0.75rem; text-align: right;">87.2</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-border);">
+              <td style="padding: 0.75rem;">Charlie Brown</td>
+              <td style="padding: 0.75rem;">Designer</td>
+              <td style="padding: 0.75rem;"><span class="badge badge--warning">Away</span></td>
+              <td style="padding: 0.75rem; text-align: right;">92.8</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem;">Diana Prince</td>
+              <td style="padding: 0.75rem;">Manager</td>
+              <td style="padding: 0.75rem;"><span class="badge badge--danger">Offline</span></td>
+              <td style="padding: 0.75rem; text-align: right;">95.1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Form -->
+      <h3 class="mt-lg">Contact Form</h3>
+      <form id="contact" action="/api/contact" method="POST" novalidate>
+        <fieldset style="border: 1px solid var(--color-border); padding: 1.5rem; border-radius: 0.5rem;">
+          <legend style="font-weight: 600; padding: 0 0.5rem;">Get in Touch</legend>
+
+          <div style="display: grid; gap: 1rem; margin-top: 1rem;">
+            <div>
+              <label for="name" style="display: block; font-weight: 500; margin-bottom: 0.25rem;">
+                Full Name <abbr title="required">*</abbr>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                minlength="2"
+                maxlength="100"
+                placeholder="John Doe"
+                autocomplete="name"
+                style="width: 100%; padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 0.375rem;"
+              />
+            </div>
+
+            <div>
+              <label for="email" style="display: block; font-weight: 500; margin-bottom: 0.25rem;">
+                Email <abbr title="required">*</abbr>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="john@example.com"
+                autocomplete="email"
+                style="width: 100%; padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 0.375rem;"
+              />
+            </div>
+
+            <div>
+              <label for="subject" style="display: block; font-weight: 500; margin-bottom: 0.25rem;">Subject</label>
+              <select
+                id="subject"
+                name="subject"
+                style="width: 100%; padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 0.375rem;"
+              >
+                <option value="">Select a topic&hellip;</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="bug">Bug Report</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" style="display: block; font-weight: 500; margin-bottom: 0.25rem;">
+                Message <abbr title="required">*</abbr>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                placeholder="Tell us what&#39;s on your mind&hellip;"
+                style="width: 100%; padding: 0.5rem; border: 1px solid var(--color-border); border-radius: 0.375rem; resize: vertical;"
+              ></textarea>
+            </div>
+
+            <div>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="checkbox" name="newsletter" value="yes" />
+                Subscribe to our newsletter
+              </label>
+            </div>
+
+            <div style="display: flex; gap: 1rem;">
+              <button type="submit" class="btn btn--primary">Send Message</button>
+              <button type="reset" class="btn btn--outline">Reset</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- ═══ Code Section ═════════════════════════════════════── -->
+    <section id="code" class="mb-lg" aria-labelledby="code-heading">
+      <h2 id="code-heading" class="mb-lg">Code Examples</h2>
+      <pre><code>// JavaScript example
+const greeting = (name) =&gt; `Hello, ${name}!`;
+console.log(greeting("World"));</code></pre>
+    </section>
+
+  </main>
+
+  <!-- ═══ Footer ═══════════════════════════════════════════════ -->
+  <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--color-border); color: var(--color-text-muted);">
+    <p>&copy; 2025 Theme Preview. Built with <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> &amp; <abbr title="JavaScript">JS</abbr>.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="#top">Back to top &uarr;</a>
+    </p>
+  </footer>
+
+  <!-- ═══ Scripts ══════════════════════════════════════════════ -->
+  <script>
+    // Theme toggle
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    });
+
+    // Form validation
+    document.getElementById("contact").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      console.log("Form submitted:", Object.fromEntries(formData));
+      alert("Message sent successfully!");
+    });
+  </script>
+</body>
+</html>

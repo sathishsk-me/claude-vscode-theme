@@ -1,0 +1,316 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "_comment": "Sample JSON file for VS Code theme preview",
+  "version": "2.0.0",
+  "lastUpdated": "2025-01-15T10:30:00Z",
+
+  "application": {
+    "name": "Theme Preview App",
+    "description": "A comprehensive JSON sample demonstrating various data types and structures",
+    "environment": "production",
+    "debug": false,
+    "port": 3000,
+    "baseUrl": "https://api.example.com/v2",
+    "cors": {
+      "enabled": true,
+      "origins": [
+        "https://app.example.com",
+        "https://admin.example.com",
+        "http://localhost:3000"
+      ],
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+      "maxAge": 86400,
+      "credentials": true
+    }
+  },
+
+  "database": {
+    "primary": {
+      "host": "db-primary.example.com",
+      "port": 5432,
+      "name": "app_production",
+      "ssl": true,
+      "pool": {
+        "min": 5,
+        "max": 20,
+        "idleTimeout": 30000,
+        "acquireTimeout": 60000
+      },
+      "replication": {
+        "enabled": true,
+        "readReplicas": [
+          "db-replica-1.example.com",
+          "db-replica-2.example.com"
+        ]
+      }
+    },
+    "cache": {
+      "provider": "redis",
+      "host": "cache.example.com",
+      "port": 6379,
+      "ttl": 3600,
+      "keyPrefix": "app:",
+      "cluster": {
+        "enabled": false,
+        "nodes": []
+      }
+    }
+  },
+
+  "authentication": {
+    "provider": "oauth2",
+    "jwt": {
+      "secret": "your-secret-key-here",
+      "expiresIn": "24h",
+      "refreshExpiresIn": "7d",
+      "algorithm": "RS256",
+      "issuer": "https://auth.example.com"
+    },
+    "oauth": {
+      "google": {
+        "clientId": "google-client-id.apps.googleusercontent.com",
+        "callbackUrl": "/auth/google/callback",
+        "scopes": ["openid", "profile", "email"]
+      },
+      "github": {
+        "clientId": "github-client-id",
+        "callbackUrl": "/auth/github/callback",
+        "scopes": ["user:email", "read:org"]
+      }
+    },
+    "rateLimit": {
+      "windowMs": 900000,
+      "maxRequests": 100,
+      "skipSuccessfulRequests": false,
+      "message": "Too many authentication attempts. Please try again later."
+    }
+  },
+
+  "features": {
+    "darkMode": true,
+    "notifications": {
+      "email": true,
+      "push": true,
+      "sms": false,
+      "inApp": true
+    },
+    "analytics": {
+      "enabled": true,
+      "provider": "mixpanel",
+      "trackPageViews": true,
+      "trackClicks": false,
+      "sampleRate": 0.75
+    },
+    "experiments": [
+      {
+        "id": "exp-001",
+        "name": "new-onboarding-flow",
+        "enabled": true,
+        "percentage": 25,
+        "variants": ["control", "variant-a", "variant-b"],
+        "startDate": "2025-01-01",
+        "endDate": null
+      },
+      {
+        "id": "exp-002",
+        "name": "ai-recommendations",
+        "enabled": false,
+        "percentage": 0,
+        "variants": ["control", "ai-v1"],
+        "startDate": "2025-02-01",
+        "endDate": "2025-04-30"
+      }
+    ]
+  },
+
+  "users": [
+    {
+      "id": "usr-001",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "role": "admin",
+      "active": true,
+      "avatar": "https://example.com/avatars/alice.jpg",
+      "metadata": {
+        "loginCount": 847,
+        "lastLogin": "2025-01-15T09:23:45Z",
+        "createdAt": "2023-06-15T14:30:00Z",
+        "preferences": {
+          "theme": "dark",
+          "language": "en-US",
+          "timezone": "America/New_York",
+          "itemsPerPage": 25
+        }
+      },
+      "permissions": [
+        "users:read",
+        "users:write",
+        "users:delete",
+        "products:read",
+        "products:write",
+        "analytics:read",
+        "settings:manage"
+      ],
+      "tags": ["team-lead", "early-adopter"]
+    },
+    {
+      "id": "usr-002",
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "role": "developer",
+      "active": true,
+      "avatar": null,
+      "metadata": {
+        "loginCount": 523,
+        "lastLogin": "2025-01-14T16:45:12Z",
+        "createdAt": "2023-09-22T10:00:00Z",
+        "preferences": {
+          "theme": "light",
+          "language": "en-GB",
+          "timezone": "Europe/London",
+          "itemsPerPage": 50
+        }
+      },
+      "permissions": [
+        "products:read",
+        "products:write",
+        "analytics:read"
+      ],
+      "tags": ["backend", "api-team"]
+    },
+    {
+      "id": "usr-003",
+      "name": "Charlie Davis",
+      "email": "charlie@example.com",
+      "role": "viewer",
+      "active": false,
+      "avatar": "https://example.com/avatars/charlie.jpg",
+      "metadata": {
+        "loginCount": 12,
+        "lastLogin": "2024-11-30T08:15:00Z",
+        "createdAt": "2024-08-10T09:00:00Z",
+        "deactivatedAt": "2025-01-10T12:00:00Z",
+        "deactivationReason": "Account inactive for 45+ days",
+        "preferences": {
+          "theme": "system",
+          "language": "fr-FR",
+          "timezone": "Europe/Paris",
+          "itemsPerPage": 20
+        }
+      },
+      "permissions": [
+        "products:read",
+        "analytics:read"
+      ],
+      "tags": []
+    }
+  ],
+
+  "products": {
+    "categories": [
+      {
+        "id": "cat-electronics",
+        "name": "Electronics",
+        "slug": "electronics",
+        "icon": "💻",
+        "subcategories": [
+          { "id": "cat-audio", "name": "Audio", "slug": "audio", "count": 156 },
+          { "id": "cat-peripherals", "name": "Peripherals", "slug": "peripherals", "count": 89 },
+          { "id": "cat-accessories", "name": "Accessories", "slug": "accessories", "count": 234 }
+        ]
+      },
+      {
+        "id": "cat-software",
+        "name": "Software",
+        "slug": "software",
+        "icon": "📦",
+        "subcategories": [
+          { "id": "cat-tools", "name": "Developer Tools", "slug": "dev-tools", "count": 67 },
+          { "id": "cat-themes", "name": "Themes & Extensions", "slug": "themes", "count": 412 }
+        ]
+      }
+    ],
+    "stats": {
+      "totalProducts": 1247,
+      "activeProducts": 1089,
+      "averagePrice": 124.99,
+      "priceRange": {
+        "min": 0.99,
+        "max": 2999.99,
+        "median": 79.99
+      },
+      "topSelling": ["PROD-001", "PROD-045", "PROD-123"],
+      "recentlyAdded": 42,
+      "outOfStock": 23
+    }
+  },
+
+  "i18n": {
+    "defaultLocale": "en-US",
+    "supportedLocales": ["en-US", "en-GB", "fr-FR", "de-DE", "ja-JP", "zh-CN", "es-ES"],
+    "fallbackLocale": "en-US",
+    "messages": {
+      "en-US": {
+        "greeting": "Hello, {name}!",
+        "items_count": "{count, plural, =0 {No items} one {1 item} other {{count} items}}",
+        "last_updated": "Last updated {date, date, long} at {date, time, short}"
+      },
+      "fr-FR": {
+        "greeting": "Bonjour, {name} !",
+        "items_count": "{count, plural, =0 {Aucun élément} one {1 élément} other {{count} éléments}}",
+        "last_updated": "Dernière mise à jour le {date, date, long} à {date, time, short}"
+      }
+    }
+  },
+
+  "monitoring": {
+    "healthCheck": {
+      "endpoint": "/health",
+      "interval": 30,
+      "timeout": 5,
+      "checks": ["database", "cache", "storage", "external-api"]
+    },
+    "metrics": {
+      "enabled": true,
+      "endpoint": "/metrics",
+      "collectors": ["http", "database", "cache", "system"],
+      "retention": {
+        "raw": "24h",
+        "aggregated": "30d",
+        "downsampled": "1y"
+      }
+    },
+    "alerts": [
+      {
+        "name": "high-error-rate",
+        "condition": "error_rate > 0.05",
+        "severity": "critical",
+        "channels": ["slack", "pagerduty"],
+        "cooldown": 300
+      },
+      {
+        "name": "high-latency",
+        "condition": "p99_latency > 2000",
+        "severity": "warning",
+        "channels": ["slack"],
+        "cooldown": 600
+      },
+      {
+        "name": "disk-usage",
+        "condition": "disk_usage_percent > 85",
+        "severity": "warning",
+        "channels": ["email"],
+        "cooldown": 3600
+      }
+    ]
+  },
+
+  "regex_patterns": {
+    "email": "^[\\w.+-]+@[\\w-]+\\.[\\w.]+$",
+    "uuid": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+    "semver": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$",
+    "slug": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+    "hexColor": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+    "isoDate": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z?$"
+  }
+}
