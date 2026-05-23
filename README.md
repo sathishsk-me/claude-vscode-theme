@@ -1,14 +1,14 @@
 # Claude Code Theme
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/sathishsk-me.claude-code-theme?style=flat-square&label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-code-theme)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/sathishsk-me.claude-code-theme?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-code-theme)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/sathishsk-me.claude-code-theme?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-code-theme)
+[![Version](https://vsmarketplacebadges.dev/version/sathishsk-me.claude-theme-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-theme-for-vscode)
+[![Installs](https://vsmarketplacebadges.dev/installs/sathishsk-me.claude-theme-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-theme-for-vscode)
+[![Rating](https://vsmarketplacebadges.dev/rating-star/sathishsk-me.claude-theme-for-vscode.svg)](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-theme-for-vscode)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 A dark theme for Visual Studio Code inspired by the **Claude Code** terminal interface - featuring warm oranges, deep darks, and cream accents for a comfortable and focused coding experience.
 
 <!-- Uncomment and add your screenshots -->
-![Claude Code Theme Preview](https://raw.githubusercontent.com/sathishsk-me/claude_vscode_theme/master/images/screenshot-main.png)
+![Claude Code Theme Preview](https://raw.githubusercontent.com/sathishsk-me/claude-vscode-theme/master/images/screenshot-main.png)
 
 ---
 
@@ -20,13 +20,13 @@ This extension includes **two** carefully crafted dark theme variants:
 
 The primary theme with a deep, dark background and balanced contrast. Ideal for long coding sessions with carefully selected colors that reduce eye strain.
 
-![Claude Code](https://raw.githubusercontent.com/sathishsk-me/claude_vscode_theme/master/images/screenshot-claude-code.png)
+![Claude Code](https://raw.githubusercontent.com/sathishsk-me/claude-vscode-theme/master/images/screenshot-claude-code.png)
 
 ### Claude Code Warm
 
 A warmer variation with amber and orange tones that creates a cozy, inviting atmosphere. Perfect for evening coding or if you prefer warmer color temperatures.
 
-![Claude Code Warm](https://raw.githubusercontent.com/sathishsk-me/claude_vscode_theme/master/images/screenshot-claude-code-warm.png)
+![Claude Code Warm](https://raw.githubusercontent.com/sathishsk-me/claude-vscode-theme/master/images/screenshot-claude-code-warm.png)
 
 ---
 
@@ -44,15 +44,8 @@ A warmer variation with amber and orange tones that creates a cozy, inviting atm
 ### From Command Line
 
 ```bash
-code --install-extension sathishsk-me.claude-code-theme
+code --install-extension sathishsk-me.claude-theme-for-vscode
 ```
-
-### From VSIX File
-
-1. Download the `.vsix` file from [Releases](https://github.com/sathishsk-me/claude_vscode_theme/releases)
-2. Open VS Code
-3. Run `Extensions: Install from VSIX...` from the Command Palette
-4. Select the downloaded file
 
 ---
 
@@ -125,8 +118,8 @@ Contributions, issues, and feature requests are welcome.
 ### Local Development
 
 ```bash
-git clone https://github.com/sathishsk-me/claude_vscode_theme.git
-cd claude_vscode_theme
+git clone https://github.com/sathishsk-me/claude-vscode-theme.git
+cd claude-vscode-theme
 code .
 
 # Press F5 to launch the Extension Development Host
@@ -143,9 +136,9 @@ Sample files for testing syntax highlighting are in `samples/`.
 
 ## Feedback
 
-- Found a bug? [Open an issue](https://github.com/sathishsk-me/claude_vscode_theme/issues)
-- Have a suggestion? [Start a discussion](https://github.com/sathishsk-me/claude_vscode_theme/discussions)
-- Enjoying the theme? [Rate it on the Marketplace](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-code-theme&ssr=false#review-details)
+- Found a bug? [Open an issue](https://github.com/sathishsk-me/claude-vscode-theme/issues)
+- Have a suggestion? [Start a discussion](https://github.com/sathishsk-me/claude-vscode-theme/discussions)
+- Enjoying the theme? [Rate it on the Marketplace](https://marketplace.visualstudio.com/items?itemName=sathishsk-me.claude-theme-for-vscode&ssr=false#review-details)
 
 ---
 

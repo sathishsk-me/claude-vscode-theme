@@ -31,5 +31,5 @@ All notable changes to the **Claude Code Theme** extension will be documented in
 - Semantic token color support improvements
 - More language-specific optimizations
 
-[1.0.0]: https://github.com/sathishsk-me/claude_vscode_theme/releases/tag/v1.0.0
-[Unreleased]: https://github.com/sathishsk-me/claude_vscode_theme/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/sathishsk-me/claude-vscode-theme/releases/tag/v1.0.0
+[Unreleased]: https://github.com/sathishsk-me/claude-vscode-theme/compare/v1.0.0...HEAD

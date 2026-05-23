@@ -1,11 +1,11 @@
 {
   "name": "claude-theme-for-vscode",
   "displayName": "Claude Theme for VS Code by SK",
-  "description": "Dark theme inspired by the Claude Code terminal interface — warm oranges, deep darks, and cream accents. Includes two variants: Claude Code and Claude Code Warm.",
-  "version": "0.1.0",
+  "description": "Dark theme inspired by the Claude Code terminal interface - warm oranges, deep darks, and cream accents. Includes two variants: Claude Code and Claude Code Warm.",
+  "version": "1.1.0",
   "publisher": "sathishsk-me",
   "author": {
-    "name": "Sathish SK"
+    "name": "S K 🦊"
   },
   "icon": "images/icon.png",
   "engines": {
@@ -46,11 +46,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sathishsk-me/claude_vscode_theme.git"
+    "url": "https://github.com/sathishsk-me/claude-vscode-theme.git"
   },
-  "homepage": "https://github.com/sathishsk-me/claude_vscode_theme#readme",
+  "homepage": "https://github.com/sathishsk-me/claude-vscode-theme#readme",
   "bugs": {
-    "url": "https://github.com/sathishsk-me/claude_vscode_theme/issues"
+    "url": "https://github.com/sathishsk-me/claude-vscode-theme/issues"
   },
   "license": "MIT"
 }
