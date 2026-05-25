@@ -2,7 +2,7 @@
   "name": "claude-theme-for-vscode",
   "displayName": "Claude Theme for VS Code by SK",
   "description": "Theme inspired by the Claude Code terminal interface - warm oranges, deep darks, and cream accents. Includes dark and light variants: Claude Code, Claude Code Warm, Claude Code Light, and Claude Code Light Warm.",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "publisher": "sathishsk-me",
   "author": {
     "name": "S K 🦊"
