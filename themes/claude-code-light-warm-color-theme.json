@@ -205,7 +205,7 @@
     "titleBar.activeForeground": "#2A2520",
     "titleBar.inactiveBackground": "#F3EDE5",
     "titleBar.inactiveForeground": "#B5AA9C",
-    "titleBar.border": "#F3EDE5",
+    "titleBar.border": "#e2e2df",
     "menubar.selectionBackground": "#E5DACE",
     "menubar.selectionForeground": "#2A2520",
     "menu.background": "#F3EDE5",

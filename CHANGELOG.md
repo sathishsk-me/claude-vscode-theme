@@ -28,6 +28,12 @@ All notable changes to the **Claude Code Theme** extension will be documented in
 - **Claude Code Light** — Primary light theme with soft backgrounds and balanced contrast
 - **Claude Code Light Warm** — Warmer variant with cream and orange tones
 
+## [3.0.0] - 2025-05-25
+
+### Added
+
+- Update code syntax highlighting for better readability and contrast
+- Updated title bar and menu colors for better visual separation and consistency across themes
 
 ## [Unreleased]
 
@@ -39,4 +45,5 @@ All notable changes to the **Claude Code Theme** extension will be documented in
 
 [1.0.0]: https://github.com/sathishsk-me/claude-vscode-theme/releases/tag/v1.0.0
 [2.0.0]: https://github.com/sathishsk-me/claude-vscode-theme/releases/tag/v2.0.0
-[Unreleased]: https://github.com/sathishsk-me/claude-vscode-theme/compare/v2.0.0...HEAD
+[3.0.0]: https://github.com/sathishsk-me/claude-vscode-theme/releases/tag/v3.0.0
+[Unreleased]: https://github.com/sathishsk-me/claude-vscode-theme/compare/v3.0.0...HEAD
